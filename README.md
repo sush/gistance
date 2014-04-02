@@ -55,7 +55,7 @@ The `unit`, `language` and `sensor` parameters can be set globally or can be pro
 
 Gistance only supports authentication via an API key.
 
-You can request one following these [steps](https://developers.google.com/places/documentation/#Authentication).
+You can request one following these [steps](https://developers.google.com/maps/documentation/distancematrix/#api_key).
 
 ## Usage
 
