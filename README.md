@@ -1,5 +1,3 @@
-![Gistance](https://raw.github.com/sush/gistance/master/gistance.png)
-
 Simple Ruby wrapper for the [Google Distance Matrix API](https://developers.google.com/places/documentation).
 
 **Current version**: [![Gem Version](https://badge.fury.io/rb/gistance.png)](http://badge.fury.io/rb/gistance)
