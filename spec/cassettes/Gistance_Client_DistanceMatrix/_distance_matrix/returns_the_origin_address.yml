@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=48.857066,%202.341138&language=en&origins=10%2BPlace%2Bde%2Bla%2BConcorde,%2B75008%2BParis,%2BFrance&sensor=false&unit=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 02 Apr 2014 22:24:08 GMT
+      Expires:
+      - Thu, 03 Apr 2014 22:24:08 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "destination_addresses" : [ "1561 Place du Pont Neuf, 75001 Paris, France" ],
+           "origin_addresses" : [ "10 Place de la Concorde, 75008 Paris, France" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "2.3 km",
+                          "value" : 2335
+                       },
+                       "duration" : {
+                          "text" : "5 mins",
+                          "value" : 293
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 02 Apr 2014 22:24:09 GMT
+recorded_with: VCR 2.9.0

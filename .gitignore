@@ -1,0 +1,9 @@
+.bundle
+.rvmrc
+*.swp
+coverage/
+*.DS_Store
+tags
+.yardoc
+doc/
+pkg/

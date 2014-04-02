@@ -1,0 +1,4 @@
+--no-private
+--quiet
+--markup=markdown
+--exclude lib/lieu/response
