@@ -16,7 +16,7 @@ module Gistance
       response = connection.send(method) do |request|
         request.params[:key] = self.api_key if self.api_key
 
-        %i[language unit sensor].each do |option|
+        [:language, :unit, :sensor].each do |option|
           request.params[option] = options.delete(option) || self.public_send(option)
         end
 
