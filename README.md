@@ -1,5 +1,3 @@
-![Gistance](https://raw.github.com/sush/gistance/master/gistance.png)
-
 Simple Ruby wrapper for the [Google Distance Matrix API](https://developers.google.com/places/documentation).
 
 **Current version**: [![Gem Version](https://badge.fury.io/rb/gistance.png)](http://badge.fury.io/rb/gistance)
@@ -57,7 +55,7 @@ The `unit`, `language` and `sensor` parameters can be set globally or can be pro
 
 Gistance only supports authentication via an API key.
 
-You can request one following these [steps](https://developers.google.com/places/documentation/#Authentication).
+You can request one following these [steps](https://developers.google.com/maps/documentation/distancematrix/#api_key).
 
 ## Usage
 
