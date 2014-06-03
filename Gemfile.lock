@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gistance (1.0.0)
+    gistance (1.1.0)
       faraday (~> 0.8.9)
       faraday_middleware (~> 0.9.0)
       hashie (~> 2.0.5)
