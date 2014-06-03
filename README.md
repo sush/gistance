@@ -14,6 +14,7 @@ Simple Ruby wrapper for the [Google Distance Matrix API](https://developers.goog
 - 1.9.3
 - 2.0.0
 - 2.1.1
+- 2.1.2
 
 ## Installation
 
@@ -53,9 +54,19 @@ The `unit`, `language` and `sensor` parameters can be set globally or can be pro
 
 ## Authentication
 
-Gistance only supports authentication via an API key.
+Gistance supports authentication via a [simple API key](https://developers.google.com/maps/documentation/business/webservices/auth) or a [Google Maps for Business signature](https://developers.google.com/maps/documentation/business/webservices/auth).
 
-You can request one following these [steps](https://developers.google.com/maps/documentation/distancematrix/#api_key).
+```ruby
+# Google Maps API for Business authentication
+Gistance.configure do |c|
+  c.api_key = 'YOUR_API_KEY'
+  c.business = {
+    client_id: 'gme-fuubar',
+    channel: 'test' # optional
+  }
+  # etc...
+end
+```
 
 ## Usage
 
