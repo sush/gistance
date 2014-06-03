@@ -79,5 +79,19 @@ describe Gistance::Client do
         expect(client.sensor).to be_true
       end
     end
+
+    describe 'business' do
+      it 'sets businnes'  do
+        client = Gistance::Client.new
+
+        expect(client.business).to be_nil
+      end
+
+      it 'overrides module configuration' do
+        client = Gistance::Client.new(business: { client: 'gme-fuubar' })
+
+        expect(client.business[:client]).to eql('gme-fuubar')
+      end
+    end
   end
 end

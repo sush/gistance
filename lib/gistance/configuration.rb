@@ -7,7 +7,8 @@ module Gistance
       :api_key,
       :language,
       :unit,
-      :sensor
+      :sensor,
+      :business
     ].freeze
 
     # Default Google Distance Matrix API endpoint
@@ -37,6 +38,7 @@ module Gistance
       self.language = 'en'
       self.unit = 'metric'
       self.sensor = false
+      self.business = nil
     end
 
     # Reset configuration options to default values
