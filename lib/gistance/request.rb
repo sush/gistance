@@ -17,7 +17,7 @@ module Gistance
 
     def request(method, options)
       response = connection.send(method) do |request|
-        [:language, :unit, :sensor].each do |option|
+        [:language, :units, :sensor].each do |option|
           request.params[option] = options.delete(option) || self.public_send(option)
         end
 

@@ -6,7 +6,7 @@ module Gistance
       :api_endpoint,
       :api_key,
       :language,
-      :unit,
+      :units,
       :sensor,
       :business
     ].freeze
@@ -36,7 +36,7 @@ module Gistance
       self.api_endpoint = DEFAULT_API_ENDPOINT
       self.api_key = nil
       self.language = 'en'
-      self.unit = 'metric'
+      self.units = 'metric'
       self.sensor = false
       self.business = nil
     end

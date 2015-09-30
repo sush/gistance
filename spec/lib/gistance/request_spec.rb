@@ -23,13 +23,28 @@ describe Gistance::Request do
 
       assert_requested :get, 'https://maps.googleapis.com/maps/api/distancematrix/json?'\
         'language=en&'\
-        'unit=metric&'\
+        'units=metric&'\
         'sensor=false&'\
         'client=gme-fuubar&'\
         'channel=test&'\
-        'signature=wA6neJ6IkHTs6BxFt6ves7hxsZI%3D'
+        'signature=JlBk9pESGAhVTtCZbidG8Ss2fbM%3D'
 
       VCR.turn_on!
+    end
+
+    it 'respects overridden options' do
+      stub_request(:get, /.*maps.*/).to_return(body: { status: 'ok' }.to_json)
+
+      business_client.units = 'imperial'
+
+      business_client.get
+
+      expect(
+        a_request(:get, 'https://maps.googleapis.com/maps/api/distancematrix/json').
+        with(:query => hash_including("units" => "imperial"))
+      ).
+      to have_been_made
+
     end
   end
 end

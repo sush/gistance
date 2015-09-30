@@ -32,7 +32,7 @@ RSpec.configure do |c|
 end
 
 def google_distance_matrix_url
-  "#{Gistance.api_endpoint}?language=en&sensor=false&unit=metric"
+  "#{Gistance.api_endpoint}?language=en&sensor=false&units=metric"
 end
 
 def client
