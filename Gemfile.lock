@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gistance (1.1.0)
+    gistance (1.2.0)
       faraday (~> 0.9.1)
       faraday_middleware (~> 0.9.1)
       hashie (~> 2.0.5)
@@ -92,3 +92,6 @@ DEPENDENCIES
   vcr
   webmock
   yard
+
+BUNDLED WITH
+   1.10.6
