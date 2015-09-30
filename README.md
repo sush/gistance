@@ -33,7 +33,7 @@ API methods are available as module methods
 ```ruby
 Gistance.configure do |c|
   c.api_key = 'YOUR_API_KEY'
-  c.unit = 'imperial' # default to metric
+  c.units = 'imperial' # default to metric
   c.language = 'fr' # default to en
   c.sensor = true # default to false
 end
@@ -44,13 +44,13 @@ or as client instance methods
 ```ruby
 Gistance::Client.new(
   api_key: 'YOUR_API_KEY',
-  unit: 'imperial',
+  units: 'imperial',
   language: 'fr',
   sensor: true
 )
 ```
 
-The `unit`, `language` and `sensor` parameters can be set globally or can be provided for every request if passed as parameters.
+The `units`, `language` and `sensor` parameters can be set globally or can be provided for every request if passed as parameters.
 
 ## Authentication
 

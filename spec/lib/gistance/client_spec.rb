@@ -52,17 +52,17 @@ describe Gistance::Client do
       end
     end
 
-    describe 'unit' do
-      it 'sets unit'  do
+    describe 'units' do
+      it 'sets units'  do
         client = Gistance::Client.new
 
-        expect(client.unit).to eql 'metric'
+        expect(client.units).to eql 'metric'
       end
 
       it 'overrides module configuration' do
-        client = Gistance::Client.new(unit: 'imperial')
+        client = Gistance::Client.new(units: 'imperial')
 
-        expect(client.unit).to eql 'imperial'
+        expect(client.units).to eql 'imperial'
       end
     end
 
